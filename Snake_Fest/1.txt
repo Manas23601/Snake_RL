@@ -1,0 +1,15 @@
+to do:
+ 
+
+know the location of the snake's body as well as food location. both of them are lists
+manage the color, and change the UI, color is hardcoded in grid
+find the place to keep the custom reward function. presently hardcoded in move_result function in controller
+tester before they make a submission
+different ways of choosing replay memory ( random, index)
+dataclasses are alive only during runtime, have to store them to reveiw previous games.
+
+
+up - 0
+right - 1
+down - 2
+left - 3
