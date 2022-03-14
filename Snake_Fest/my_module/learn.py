@@ -56,7 +56,7 @@ class learn(object):
             if reward1 == -1: # Snake Died -> Negative reward
                 state = self._GetStateStr(history[0]['state'])
                 action = history[0]['action']
-                reward = -10
+                reward = -1
                 self.q_table[state][action] = (1-self.alpha) * self.q_table[state][action] + self.alpha * reward # Bellman equation - there is no future state since game is over
             else:
                 s1 = h['state'] # current state
@@ -70,7 +70,7 @@ class learn(object):
                 y2 = s1.distance[1] # y distance at previous state
 
                 if reward1 == 1:
-                    reward = 10
+                    reward = 1
                 elif (abs(x1) > abs(x2) or abs(y1) > abs(y2)):
                     reward = 1  
                 else:

@@ -4,8 +4,8 @@ import settings
 
 def initialise_q_table(file_location, file_name):
     wall_snake_detect = [''.join(s) for s in list(itertools.product(*[['0','1']] * 4))]
-    food_horizontal = ['L','R','NA']
-    food_vertical = ['U','D','NA']
+    food_horizontal = ['0','1','NA']
+    food_vertical = ['2','3','NA']
 
     states = {}
     for i in food_horizontal:

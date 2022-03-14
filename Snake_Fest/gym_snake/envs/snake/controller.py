@@ -1,6 +1,7 @@
 from gym_snake.envs.snake import Snake
 from gym_snake.envs.snake import Grid
 import numpy as np
+import random
 
 class Controller():
     """
@@ -20,7 +21,8 @@ class Controller():
         self.snakes = []
         self.dead_snakes = []
         for i in range(1,n_snakes+1):
-            start_coord = [i*grid_size[0]//(n_snakes+1), snake_size+1]
+            # start_coord = [i*grid_size[0]//(n_snakes+1), snake_size+1]
+            start_coord = [random.randint(0,29), random.randint(0,29)]
             self.snakes.append(Snake(start_coord, snake_size))
             color = [self.grid.HEAD_COLOR[0], i*10, 0]
             self.snakes[-1].head_color = color

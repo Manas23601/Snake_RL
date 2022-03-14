@@ -1,5 +1,7 @@
 from queue import deque
+from random import random
 import numpy as np
+import random
 
 class Snake():
 
@@ -23,7 +25,8 @@ class Snake():
         length - starting number of units in snake's body
         """
 
-        self.direction = self.DOWN
+        # self.direction = self.DOWN
+        self.direction = random.randint(-1,4) % 4
         self.head = np.asarray(head_coord_start).astype(np.int)
         self.head_color = np.array([255,0,0], np.uint8)
         self.body = deque()
